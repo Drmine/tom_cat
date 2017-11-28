@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TomCat</title>
+    <link href="css/cat.css" rel="stylesheet"/>
+    <link href="css/public.css.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1"/>
+
+</head>
+<body>
+
+<div class="tomAnimate">
+
+    <img src="images/Angry/angry_0.jpg" width="100%" height="100%" alt="TomCat" id="back">
+
+
+    <button onclick="cymbal()" class="tomBtn cymbal" id="cymbal"></button>
+    <button onclick="drink()" class="tomBtn drink" id="drink"></button>
+    <button onclick="eat()" class="tomBtn eat" id="eat"></button>
+    <button onclick="fart()" class="tomBtn fart" id="fart"></button>
+    <button onclick="pie()" class="tomBtn pie" id="pie"></button>
+    <button onclick="scratch()" class="tomBtn scratch" id="scratch"></button>
+
+    <span style="display: none" id="audio"></span>
+
+</div>
+
+</body>
+
+<script>
+
+
+    function pie() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/slap1.wav" autoplay="autoplay"></audio>>'
+        }, 100);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Pie/pie_" + i + ".jpg";
+            i++;
+            if (i < 23) {
+                document.getElementById('pie').disabled = true;
+            }
+            else if (i > 23) {
+                document.getElementById('pie').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+    }
+
+    function scratch() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/scratch_kratzen.wav" autoplay="autoplay"></audio>>'
+        }, 100);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Scratch/scratch_" + i + ".jpg";
+            i++;
+            if (i < 55) {
+                document.getElementById('scratch').disabled = true;
+            }
+            else if (i > 55) {
+                document.getElementById('scratch').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+    }
+
+
+    function fart() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/fart001_11025.wav" autoplay="autoplay"></audio>>'
+        }, 100);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Fart/fart_" + i + ".jpg";
+            i++;
+            if (i < 27) {
+                document.getElementById('fart').disabled = true;
+            }
+            else if (i > 27) {
+                document.getElementById('fart').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+    }
+
+
+    function eat() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/p_eat.wav" autoplay="autoplay"></audio>>'
+        }, 100);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Eat/eat_" + i + ".jpg";
+            i++;
+            if (i < 39) {
+                document.getElementById('eat').disabled = true;
+            }
+            else if (i > 39) {
+                document.getElementById('eat').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+    }
+
+
+    function drink() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/p_drink_milk.wav" autoplay="autoplay"></audio>>'
+        }, 100);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Drink/drink_" + i + ".jpg";
+            i++;
+            if (i < 80) {
+                document.getElementById('drink').disabled = true;
+            }
+            else if (i > 80) {
+                document.getElementById('drink').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+
+    }
+
+    function cymbal() {
+        setTimeout(function () {
+            document.getElementById('audio').innerHTML = '<audio src="audio/cymbal.wav" autoplay="autoplay"></audio>>'
+        }, 200);
+        var i = 0;
+        var timeer = setInterval(function () {
+            document.getElementById('back').src = "images/Cymbal/cymbal_" + i + ".jpg";
+            i++;
+            if (i < 12) {
+                document.getElementById('cymbal').disabled = true;
+            }
+            else if (i > 12) {
+                document.getElementById('cymbal').disabled = false;
+                clearInterval(timeer);
+            }
+        }, 50);
+
+    }
+
+</script>
+
+</html>
